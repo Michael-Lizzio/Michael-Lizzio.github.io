@@ -1,0 +1,16 @@
+{
+    "foosball": {
+      "title": "Automated Foosball Goalie",
+      "description": "",
+      "images": ["cover_photo.jpeg"],
+      "page": "foosball"
+    },
+    "cryptogram": {
+      "title": "Cryptogram Solver",
+      "description": "",
+      "images": ["cryptogram_cover.png"],
+      "page": "cryptogram"
+
+    }
+  }
+  
