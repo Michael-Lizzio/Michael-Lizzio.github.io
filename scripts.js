@@ -49,7 +49,7 @@ function isMobileDevice() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  const landscapeMessage = document.getElementById('landscape-message');
+  const landscapeMessage = document.querySelector('.mobile-exclaimer-container');
   
   if (isMobileDevice()) {
       landscapeMessage.style.display = 'block';
