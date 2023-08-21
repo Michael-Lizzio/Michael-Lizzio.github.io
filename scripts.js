@@ -42,3 +42,18 @@ function navigateToProjectPage(projectId) {
   // Navigate to the project page within the same tab
   window.location.href = projectPageUrl;
 }
+
+// JavaScript to show the message only on mobile devices
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  const landscapeMessage = document.getElementById('landscape-message');
+  
+  if (isMobileDevice()) {
+      landscapeMessage.style.display = 'block';
+  } else {
+      landscapeMessage.style.display = 'none';
+  }
+});
