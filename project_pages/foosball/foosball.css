@@ -1,0 +1,330 @@
+/* Define color variables */
+:root {
+    --primary-bg: #263238;
+    --primary-text: #000000;
+    --secondary-bg: #f1f1f1;
+    --secondary-text: #fff;
+    --border-shadow: rgba(0, 0, 0, 0.2);
+    --date-bg: #ffffff;
+    --date-text: #263238;
+  }
+
+/*
+:root {
+    --primary-bg: #263238;
+    --primary-text: #eceff1;
+    --secondary-bg: #ffffff;
+    --secondary-text: #fff;
+    --border-shadow: rgba(0, 0, 0, 0.2);
+    --date-bg: #d27e64;
+    --date-text: #263238;
+  }
+  */
+  
+  .main-content {
+    padding: 40px;
+    border-radius: 50px; /* Use a large border-radius to create rounded corners */
+    box-shadow: 0 4px 8px var(--border-shadow);
+    background-color: var(--primary-bg); /* Set the background color of the content area to your primary background color */
+    margin: 40px; /* Add some margin to create space between the white edges and the content */
+}
+
+  /* Reset some default styles */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    /*background-color: var(--primary-bg);  Set main background color */
+    background-color: rgb(255, 255, 255);
+    color: var(--primary-text); /* Set main text color */
+    line-height: 1.6;
+  }
+  
+  /* Global styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--secondary-bg);
+    border-bottom: 2px solid var(--date-bg);
+    padding-bottom: 5px; /* Optional: Add some spacing between the text and the underline */
+  }
+  
+  .pathway-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--date-bg); /* Set the background color to white */
+    border-radius: 20px; /* Use a border-radius to create rounded corners */
+    padding: 10px; /* Add some padding for spacing between the frame and the images */
+  }
+
+.pathway {
+    /* Remove the animation to prevent horizontal sliding */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px; /* Add some padding for spacing between the images */
+    background-color: var(--primary-bg); /* Set the background color inside the pathway */
+    border-radius: 15px; /* Use a border-radius to create rounded corners for the inner container */
+}
+.pathway-description {
+  font-size: 20px;
+  color: var(--secondary-text);
+  margin: 20px 0;
+  text-align: center;
+
+}
+.pathway .image-date{
+  color: var(--secondary-text);
+}
+
+  
+  .pathway img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--border-shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pathway img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px var(--border-shadow);
+  }
+
+  /* Your existing CSS styles */
+
+/* Add styles for full-screen images */
+.pathway img.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+  
+  .project-introduction {
+    padding: 40px;
+    
+}
+
+.project-introduction .outer-box {
+    background-color: var(--primary-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--date-bg);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-introduction .inner-box {
+    background-color: var(--date-bg);
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.project-introduction .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-introduction .section-title {
+    font-size: 30px;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+}
+
+.project-introduction .section-description {
+    font-size: 20px;
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+.project-introduction:hover .outer-box {
+    box-shadow: 0 6px 12px var(--border-shadow);
+}
+
+.project-introduction:hover .inner-box {
+    box-shadow: 0 4px 8px var(--border-shadow);
+}
+
+  
+.video-frame {
+  border: 4px solid var(--date-bg); /* Set the border color and width */
+  border-radius: 30px; /* Add border-radius to create rounded corners for the outer frame */
+  padding: 20px; /* Add some padding to create space between the frame and the video boxes */
+  background-color: var(--primary-bg); /* Set the background color of the frame */
+}
+
+.video-frame-content {
+  border: 4px solid var(--primary-bg); /* Set the border color and width for the inner content frame */
+  border-radius: 25px; /* Add border-radius to create rounded corners for the inner frame */
+  padding: 20px; /* Add some padding to create space between the inner frame and the video boxes */
+  background-color: var(--primary-bg); /* Set the background color for the inner content frame */
+}
+  
+  .video-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .video-box {
+    position: relative;
+    background-color: var(--border-shadow);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--date-bg);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    color: var(--primary-text);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .video-box:hover {
+    box-shadow: 0 6px 12px var(--border-shadow);
+  }
+  
+  .video-box video {
+    width: 100%;
+    border-radius: 10px;
+    transition: border-radius 0.3s ease;
+  }
+  
+  .video-box video:hover {
+    border-radius: 0; /* Remove border radius on hover */
+  }
+  
+  .video-box .video-description {
+    font-size: 14px;
+    padding: 0 10px;
+    color: var(--secondary-text);
+  }
+  .date-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--date-bg);
+    padding: 5px 10px;
+    font-size: 14px;
+    color: var(--date-text);
+    border: 1px solid var(--date-text);
+    border-radius: 5px;
+    z-index: 1; /* Ensure the date box appears above the video/image */
+  }
+  
+  .project-introduction {
+    padding: 40px;
+}
+
+.outer-box {
+    background-color: var(--primary-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--border-shadow);
+}
+
+.inner-box {
+    background-color: var(--date-bg);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 30px;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 20px;
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+
+
+  
+  /* Additional styles for alternating image boxes */
+  .video-box:nth-child(odd) {
+    margin-left: 5%;
+  }
+  
+  .video-box:nth-child(even) {
+    margin-left: 15%;
+  }
+  
+  .video-box:nth-child(3n) {
+    margin-left: 10%;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .project-conclusion {
+    padding: 40px;
+}
+
+.project-conclusion .outer-box {
+    background-color: var(--primary-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--date-bg);
+}
+
+.project-conclusion .inner-box {
+    background-color: var(--date-bg);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.project-conclusion .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-conclusion .section-title {
+    font-size: 30px;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+}
+
+.project-conclusion .section-description {
+    font-size: 20px;
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+.project-conclusion:hover .outer-box {
+    box-shadow: 0 6px 12px var(--border-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-conclusion:hover .inner-box {
+    box-shadow: 0 4px 8px var(--border-shadow);
+    
+    
+}

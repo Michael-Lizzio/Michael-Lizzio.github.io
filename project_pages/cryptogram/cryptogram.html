@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptogram Solver</title>
+    <link rel="stylesheet" href="cryptogram.css">
+</head>
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <main>
+        <section id="project-title">
+            <div class="container">
+                <h2>Cryptogram Solver</h2>            
+            </div>
+        </section>
+
+        <section id="project-example-images">
+            <div class="container">
+                <!-- Big Display Image -->
+                <div class="big-image">
+                    <img id="mainImage" src="../../data/project_images/cryptogram/example_quote_0.png" alt="Main Image">
+                </div>
+                <!-- Image Options -->
+                <!--<h3>[Unsolved, Solved]</h3>-->
+                <h2>Cryptogram Examples</h2>
+                <!-- Row of Images -->
+                <div class="image-row">
+                    <img src="../../data/project_images/cryptogram/example_quote_0.png" alt="Image 1" onclick="changeMainImage(this.src)">
+                    <img src="../../data/project_images/cryptogram/example_quote_1.png" alt="Image 2" onclick="changeMainImage(this.src)">
+                    <img src="../../data/project_images/cryptogram/example_quote_2.png" alt="Image 3" onclick="changeMainImage(this.src)">
+                    <img src="../../data/project_images/cryptogram/example_quote_3.png" alt="Image 4" onclick="changeMainImage(this.src)">
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="project-story">
+            <div class="container">
+                <h2>The Backstory</h2> 
+                <!--if you want to check it out on the home page-->
+                <p class="typing-effect">
+                    First, let me explain how this all started. It was just before February school break 2022 and I had just
+                    finished my first big project, a Wordle solver, and had learned a lot in the 
+                    process (this is another one of my projects that will soon be displayed on the home page). 
+                    The day before school break, my computer science teacher had an optional fun lesson about cryptography;
+                     I already knew about cryptograms from my dad and wanted to do some more work on my other 
+                     projects, but, as class ended I grabbed an unsolved puzzle on my way out, because I knew my dad 
+                     likes doing them. After I got home I showed it to my dad and he challenged me to solve it with him.
+                      So I made another copy and we began. My dad was flying through it; I started to solve it, only
+                       to get lost in the idea of creating a computer algorithm to solve one. So during the school break 
+                       I spent most of my time in front of my white board creating a backtracking algorithm without 
+                       even knowing what one was! I got really far and almost had it working. I showed what
+                        I had to my dad and he suggested that I try a very simple puzzle with only one long word to see if it would work. 
+                        I used the encrypted version of the word "BEGINNING"… AND IT WORKED! I was so happy, it was already late at night but I was 
+                        willing to stay up until I got it to work. The next day I got a rough version to solve all
+                         sorts of puzzles. From there I only continued to improve and optimize the program. 
+                </p>           
+            </div>
+        </section>
+
+        <section id="project-image-board">
+            <div class="container">
+                <h2>Images</h2>
+                <div class="project-images">
+                    <div class="grid">
+                        <div class="grid-item">
+                            <h3>Teachers Original Handout</h3>
+                            <img src="../../data/project_images/cryptogram/original_quote.jpg" alt="Cryptogram Image 1">
+                            <p>(To view the image larger, just click on it!)</p>
+                        </div>
+                        <div class="grid-item">
+                            <div class="paragraph-box">
+                                <p>The photo to the left is the exact cryptogram that started this. The solved puzzle to the left in the 
+                                    photo is my dads work, and the other one is mine. I'm very happy that I had my dad to encourage me, though 
+                                    he was pretty skeptical after he saw what looked like hieroglyphics on my white board. After school break when 
+                                    I went back to school I was excited to show my computer science teacher the completed program and tell 
+                                    her that she inspired me to make it. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="paragraph-box">
+                                <p>The snapshot of my program on the right is the solved cryptogram puzzle from above. It was solved by my computer program 
+                                    rather than a human(my dad). If you would like to know more on how this works check out the epilogue at the bottom 
+                                    of this page which goes into the overall functionality. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <h3>Solved Quote</h3>
+                            <img src="../../data/project_images/cryptogram/solved_original_quote.png" alt="Cryptogram Image 2">
+                            <p>(To view the image larger, just click on it!)</p>
+                        </div>
+                        <div class="grid-item">
+                            <h3>My Whiteboard</h3>
+                            <img src="../../data/project_images/cryptogram/whiteboard.jpg" alt="Cryptogram Image 3">
+                            <p>(To view the image larger, just click on it!)</p>
+                        </div>
+                        <div class="grid-item">
+                            <div class="paragraph-box">
+                                <p>I don't know what I would do without my whiteboard! The whiteboard in the photo was on its way to 
+                                    the curb before I saved it. Now it's in my room in an unobtrusive spot. It is a crucial part of my 
+                                    planning process, I often write my quick thoughts on it before I finalize them on paper. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="project-videos">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="videos-container">
+                    <!-- Video 1 goes here -->
+                    <div class="video-box" id="webscraping-video">
+                        <video controls>
+                            <source src="../../data/project_videos/cryptogram/splitscreen_cryptogram.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>This shows a modified version of my code solving cryptograms on a puzzle website I found.</p>
+                    </div>
+                    <!-- Video 2 goes here -->
+                    <div class="video-box" id="program-video">
+                        <video controls>
+                            <source src="../../data/project_videos/cryptogram/fullscreen_cryptogram.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>This is the cryptogram solving the same puzzles from the website shown in the other video, just showing the webpage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="project-epilogue">
+            <div class="container">
+                <h2>Epilogue</h2> 
+                <p class="typing-effect">
+                    My program uses what some would call a brute force approach and consists of a few main parts. 
+                    First we have the organizer; this organizes the words in a way to make more efficient guesses. 
+                    It usually starts with the largest words of the puzzle first, contrary to a typical human’s strategy.
+                     My code has access to 22 word lists organized by word length. The lists are optimized in order of 
+                     common to uncommon words; this is one of my optimization strategies. For example the beginning of word_list2 would have AS, AT, BE, BY, DO, GO… My code 
+                     starts with a encrypted word like BWGQHFTL, and then tries every 8 letter word to see if their letters match up.
+                     For example, QUESTION would work. Then it would move onto the next word 
+                     like OFLWHGQ and find that MINUTES works with QUESTION because their letters line up. The more we progress 
+                     through the puzzle, the less likely a word will work because our vocabulary expands. For example right now 
+                     we have (QUESTION = BWGQHFTL and MINUTES = OFLWHGQ) F=I, H=T, L=N, Q=S, G=E W=U in both words. The issue is 
+                     when there are no more possibilities. At some point there were 2 or more possibilities and the algorithm just 
+                     chose the first one it came across. We would then have to back track to where we made that wrong guess and try 
+                     to find another one that would work further along in the program. It does this until it makes it to the end, where 
+                     In some cases there might be a wrong word or two. For example, FP could be either IF or ID (my program doesn't take 
+                     apostrophes into account). My program handles this by allowing the user to say which word they would like to try again, 
+                     and then it usually fixes it.  
+                </p>  
+                <h3>Just by guessing QUESTION for the first encoded word (BWGQHFTL), it partially fills in a bunch of the other encrypted words.</h3>
+                <h4>BWGQHFTL OFLWHGQ PGOZFLQ CTPGDGP ETGQ</h4> 
+                <h4>QUESTION _INUTES _E__INS _O_E_E_ _OES</h4>    
+                <div class="hr-line"></div>    
+                <h4>LTH ZQUQ CTTV CFDG FQ SMT CTP ZQU MG Z</h4> 
+                <h4>NOT _S_S _OO_ _I_E IS __O _O_ _S_ _E _</h4>  
+            </div>
+        </section>
+    </main>
+
+    <!--script stuff-->
+    <script src="cryptogram.js"></script>
+
+
+    <script src="../scripts.js"></script>
+    <!-- Load and inject the navbar -->
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('../../tools/navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar HTML:', error));
+    </script>
+</body>
+</html>

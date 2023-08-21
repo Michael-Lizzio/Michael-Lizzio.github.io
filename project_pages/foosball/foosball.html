@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Foosball Goalie</title>
+    <link rel="stylesheet" href="foosball.css">
+</head>
+
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <main class="main-content">
+        <section id="project-details">
+            <div class="container">
+                <h1 class="project-title">Automated Foosball Goalie</h1>
+                
+
+                <section class="project-introduction">
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="container">
+                                <h2 class="section-title">Making an Automated Foosball Goalie!</h2>
+                                <p class="section-description">
+                                    Below are some videos and descriptions detailing the process of constructing my 
+                                    automated foosball goalie KURT (Killer.Ultimate.Robot.Teammate). I started the project 
+                                    after being inspired by a similar project that I saw on a college tour. 
+                                    It was a long journey from obtaining the foosball table in October to me creating a 
+                                    working version towards the end of December. So please feel free to jump around and
+                                     check out the project below. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="video-frame">
+                    <div class="video-frame-content">
+                        <div class="video-boxes">
+                            <!-- bringing_it -->
+                            <div class="video-box" id="bringing_it-box-1">
+                                <div class="date-box">
+                                    <p class="image-date">October 18, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/bringing_it.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">So this was the day where we picked up the foosball table from Facebook market
+                                 place for $50. After that we had the fun time of hauling it all the way up the stairs so I could start
+                                  putting it back together.</p>
+                            </div>
+                        
+                            <!-- first_setup -->
+                            <div class="video-box" id="first_setup-box-2">
+                                <div class="date-box">
+                                    <p class="image-date">December 3, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/first_setup.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">After setting up the foosball table, Raspberry Pi (the brains of this thing),
+                                 and a very janky camera mount made out of dowels and a Chinese food container, 
+                                 I was able to focus on the software that would be used to track the ball across the foosball table. 
+                                 This was kind of a big deal because it would be the decider if this whole project was actually possible.
+                                </p>
+                            </div>
+
+                            <!-- ball_tracking -->
+                            <div class="video-box" id="ball_tracking-box-3">
+                                <div class="date-box">
+                                    <p class="image-date">December 9, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/ball_tracking.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">I did plenty of research on all sorts of object tracking software, 
+                                even testing out some AI object recognition software. I ended up settling on a simple color tracker (OpenCV)
+                                mainly because it could quickly display the ball's coordinates (red circle, and red text), which were derived from the live camera
+                                feed. Finally, I used the Kalman Filter to predict the future estimated position of the ball
+                                (the white circle in the video that's leading the ball).
+                            </p>
+                            </div>
+                            
+                            <!-- stepper_motor -->
+                            <div class="video-box" id="stepper_motor-box-4">
+                                <div class="date-box">
+                                    <p class="image-date">December 19, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/stepper_motor.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">Happy with the state of the object tracking software,
+                                 I started to play around with the stepper motor and motor driver. It was a complex system,
+                                  but utilizing resources found on the internet and with some guidance from my dad, an electrical engineer, 
+                                   I was able to construct the circuit that made the motor function. Having this isn't everything though, 
+                                   I need to write the software that would control the motor which includes direction, activation, and the speed. 
+                                   I would go on to make a few versions of the motor controller software, and finally got one to work well enough for testing. 
+                                   Throughout this I was fascinated by the sound it made as I increased the speed. It sounded just like a musical scale, 
+                                   which makes sense because to change the speed you set it to a different frequency, 
+                                    or in musical terms a different note. Knowing this I was able to create the jingle bells melody.
+                                    In the video you are able to hear the melody and also see the frequencies used, which are displayed on the monitor.
+                                </p>
+                            </div>
+
+                            <!-- t_slot_setup -->
+                            <div class="video-box" id="t_slot_setup-box-5">
+                                <div class="date-box">
+                                    <p class="image-date">December 22, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/t_slot_setup.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">As a part of the planing process, I designed multiple prototypes of the contraption that would attach to the side 
+                                of the table and move the goalie back and forth. Some were made out of Legos, and some cardboard.
+                                 Once I was happy with the design, I added the parts to my Amazon cart and placed the order, 
+                                 praying that they would all work together. On receiving the parts I was thrilled to start putting
+                                  the contraption (or KURT) together.  After assembling and disassembling KURT many times, and a few runs to Home Depot,
+                                   I was able to mount it and get almost everything setup and ready for the goalie to be moving!
+                            </p>
+                            </div>
+
+                            <!-- first_movement -->
+                            <div class="video-box" id="first_movement-box-6">
+                                <div class="date-box">
+                                    <p class="image-date">December 22, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/first_movement.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">Working motor controller connected to the table.</p>
+                            </div>
+
+                            <!-- final_setup -->
+                            <div class="video-box" id="final_setup-box-7">
+                                <div class="date-box">
+                                    <p class="image-date">December 25, 2022</p>
+                                </div>
+                            <video controls>
+                                <source src="../../data/project_videos/foosball/final_setup.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="video-description">Finally, I was able to combine the ball tracking software with the 
+                                motor controller to create a functional foosball goalie. A lot of tweaking and tinkering
+                                 went into getting the optimal positioning strategy down, but in the end he makes more saves 
+                                 than I would. 
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+               
+
+                <section class="project-conclusion">
+                    <div class="outer-box">
+                        <div class="inner-box">
+                            <div class="container">
+                                <h2 class="section-title">Thanks for having a visit with KURT, my Automated Foosball Goalie!</h2>
+                                <p class="section-description">
+                                    There are still plenty of flaws, and many improvements to be made. But in the end, I'm happy that I 
+                                    took on this challenge, and even more so, I'm thrilled about all the knowledge that I gained.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section> 
+                
+                <h4 class="pathway-description">Click on The Image to View Them Fullscreen!</h4>
+                <div class="pathway-container">
+                    
+                    <div class="pathway">
+                        <!-- bringing_it -->
+                        <div class="image-with-date">
+                        
+                            <img src="../../data/project_images/foosball/backyard.png"
+                                alt="Automated Foosball Goalie Image 1">
+
+                            <p class="image-date">October 18, 2022</p>
+                        </div>
+
+                        <!-- first_setup -->
+                        <div class="image-with-date">
+                        
+                            <img src="../../data/project_images/foosball/first_setup.png"
+                                alt="Automated Foosball Goalie Image 1">
+
+                            <p class="image-date">December 3, 2022</p>
+                        </div>
+                        
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/new_mount.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 9, 2022</p>
+                        </div>
+
+                        <!-- ball_tracking -->
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/image_tracking.jpeg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 9, 2022</p>
+                        </div>
+                        
+                        <!-- stepper_motor -->
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/stepper_motor.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 19, 2022</p>
+                        </div>
+
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/messy_desk.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 19, 2022</p>
+                        </div>
+
+
+                        <!-- t_slot_setup -->
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/whiteboard.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 3, 2022</p>
+                        </div>
+                        
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/models.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 5, 2022</p>
+                        </div>
+
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/t_slot_parts.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 21, 2022</p>
+                        </div>
+
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/t_slot_bulit.png"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 21, 2022</p>
+                        </div>
+                        <!-- first_movement -->
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/cart.png"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 22, 2022</p>
+                        </div>
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/wires.png"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 22, 2022</p>
+                        </div>
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/kurt_cool.png"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 22, 2022</p>
+                        </div>
+
+                        <!-- final_setup -->
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/final_view.jpg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 25, 2022</p>
+                        </div>
+
+                        <div class="image-with-date">
+                            <img src="../../data/project_images/foosball/cover_photo.jpeg"
+                                alt="Automated Foosball Goalie Image 1">
+                        
+                            <p class="image-date">December 25, 2022</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="foosball.js"></script>
+    <script src="../../scripts.js"></script>
+    <!-- Load and inject the navbar -->
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('../../tools/navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar HTML:', error));
+    </script>
+</body>
+
+</html>
