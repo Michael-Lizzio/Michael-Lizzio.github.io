@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="about.css"> <!-- Link the specific about.css -->
+</head>
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I'm a passionate computer programmer with 5 years of programming experience. When I got a Raspberry PI for Christmas of 2018,
+                     I was super excited. Looking back on it, I am grateful that I had the unique opportunity to learn computer programming by just
+                      messing around and exploring the environment while making silly and sometimes complex projects. As my knowledge of computer
+                       science has grown over the years I have gradually realized how crucial syntax, code structure, and careful planning gives you 
+                       the ability to create anything you can imagine. What I find exciting about computer science is that there's always something new to learn. 
+                       I'm looking forward to picking up more programming skills to improve my abilities.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts.js"></script>
+    <!-- Load and inject the navbar -->
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('../tools/navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar HTML:', error));
+    </script>
+</body>
+</html>
