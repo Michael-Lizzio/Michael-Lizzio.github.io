@@ -1,0 +1,39 @@
+{
+    "foosball": {
+      "title": "Automated Foosball Goalie",
+      "description": "",
+      "images": ["cover_photo.jpeg"],
+      "page": "foosball"
+    },
+    "cryptogram": {
+      "title": "Cryptogram Solver",
+      "description": "",
+      "images": ["cryptogram_cover.png"],
+      "page": "cryptogram"
+    },
+    "blackjack": {
+      "title": "BLACKJACK",
+      "description": "",
+      "images": ["blackjack_cover.png"],
+      "page": "blackjack"
+    },
+    "cyber_TTM": {
+      "title": "Cybersecurity File Editor",
+      "description": "",
+      "images": ["cyber_TTM_cover.png"],
+      "page": "blackjack"
+    },
+    "alarm_system": {
+      "title": "Home Alarm System",
+      "description": "",
+      "images": ["alarm_system_cover.png"],
+      "page": "alarm_system"
+    },
+    "wordle_solver": {
+      "title": "Wordle Solver",
+      "description": "",
+      "images": ["wordle_solver_cover.png"],
+      "page": "wordle_solver"
+    }
+  }
+  

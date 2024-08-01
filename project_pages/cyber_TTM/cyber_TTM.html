@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity File Editor</title>
+    <link rel="stylesheet" href="cyber_TTM.css">
+</head>
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <main>
+        <section id="project-title">
+            <div class="container">
+                <h2>Cybersecurity XML CKL CVS Editor</h2>            
+            </div>
+        </section>
+
+        <section id="project-example-images">
+            <div class="container">
+                <!-- Big Display Image -->
+                <div class="big-image">
+                    <img id="mainImage" src="../../data/project_images/cyber_TTM/screen_2.png" alt="Main Image">
+                </div>
+                <!-- Image Options -->
+                <!--<h3>[Unsolved, Solved]</h3>-->
+                <h2>Project Photos</h2>
+                <!-- Row of Images -->
+                <div class="image-row">
+                    <img src="../../data/project_images/cyber_TTM/screen_0.png" alt="Image 1" onclick="changeMainImage(this.src)">
+                    <img src="../../data/project_images/cyber_TTM/screen_1.png" alt="Image 2" onclick="changeMainImage(this.src)">
+                    <img src="../../data/project_images/cyber_TTM/screen_2.png" alt="Image 3" onclick="changeMainImage(this.src)">
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="project-story">
+            <div class="container">
+                <h2>Cybersecurity</h2> 
+                <!--if you want to check it out on the home page-->
+                <p class="no-typing-effect">
+                    Cybersecurity!!!
+                </p>           
+            </div>
+        </section>
+        
+
+        <section id="project-videos">
+            <div class="container">
+                <h2>Videos</h2>
+                <div class="videos-container">
+                    <!-- Video 1 goes here -->
+                    <div class="video-box" id="webscraping-video">
+                        <video controls>
+                            <source src="../../data/project_videos/cryptogram/compressed_splitscreen_cryptogram.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>This shows a modified version of my code solving cryptograms on a puzzle website I found.</p>
+                    </div>
+                    <!-- Video 2 goes here -->
+                    <div class="video-box" id="program-video">
+                        <video controls>
+                            <source src="../../data/project_videos/cryptogram/fullscreen_cryptogram.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>This is the cryptogram solving the same puzzles from the website shown in the other video, just showing the webpage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--script stuff-->
+    <script src="cyber_TTM.js"></script>
+
+
+    <script src="../scripts.js"></script>
+    <!-- Load and inject the navbar -->
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('../../tools/navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar HTML:', error));
+    </script>
+</body>
+</html>

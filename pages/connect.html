@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="connect.css"> <!-- Link the specific contact.css -->
+</head>
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <main id="holder">
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>
+                    Feel free to contact me at <a href="mailto:michaeljlizzio@gmail.com">michaeljlizzio@gmail.com</a> for any questions or additional information on my projects.
+                </p>
+            </div>
+        </section>
+
+        <section id="middle">
+            <div class="simple-buttons">
+                <a href="../data/files/resume.pdf" class="button resume" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="https://github.com/michael-lizzio" class="button github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/michael-lizzio-4a803931a" class="button linkedin" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                <a href="https://www.facebook.com/michael.lizzio.52" class="button facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.snapchat.com/add/michael.lizzio" class="button snapchat" target="_blank" rel="noopener noreferrer">Snapchat</a>
+                <a href="https://www.instagram.com/michael.lizzio" class="button instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://discordapp.com/users/743934191850487910" class="button discord" target="_blank" rel="noopener noreferrer">Discord</a>
+            </div>
+            <div class="view-projects-button">
+                <a href="/index.html" class="button view-projects">View Projects</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="../scripts.js"></script>
+    <!-- Load and inject the navbar -->
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('../tools/navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar HTML:', error));
+    </script>
+</body>
+</html>

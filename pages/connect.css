@@ -1,0 +1,235 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a base font size and line height */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style the main container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the contact section */
+#holder {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Style the heading in the contact section */
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style the paragraph in the contact section */
+#contact p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Style the email link */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#contact a:hover {
+  color: #0056b3;
+}
+
+
+/* Middle section styles */
+#middle {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.simple-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  gap: 20px; /* Adjust the gap between buttons */
+  justify-content: center;
+}
+
+.button {
+  padding: 20px 38px; /* Increase the padding to make buttons bigger */
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 18px; /* Increase font size */
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+/* Resume button specific style */
+.button.resume {
+  background: linear-gradient(45deg, #13294B, #1E3A61);
+}
+
+.button.resume:hover {
+  background: linear-gradient(45deg, #1E3A61, #13294B);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.resume:active {
+  background: linear-gradient(45deg, #13294B, #1E3A61);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* GitHub button specific style */
+.button.github {
+  background: linear-gradient(45deg, #000000, #5b5a5a);
+}
+
+.button.github:hover {
+  background: linear-gradient(45deg, #5b5a5a, #000000);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.github:active {
+  background: linear-gradient(45deg, #000000, #5b5a5a);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Linkedin button specific style */
+.button.linkedin {
+  background: linear-gradient(45deg, #ffffff, #0077B5, #04549B);
+}
+
+.button.linkedin:hover {
+  background: linear-gradient(45deg, #04549B, #0077B5, #ffffff);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.linkedin:active {
+  background: linear-gradient(45deg, #ffffff, #0077B5, #04549B);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Snapchat button specific style */
+.button.snapchat {
+  background: linear-gradient(45deg, #fffed2, #fff47b, #fffb00);
+  color: black; /* Snapchat color scheme */
+}
+
+.button.snapchat:hover {
+  background: linear-gradient(45deg, #fffb00, #fff47b, #fffed2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.snapchat:active {
+  background: linear-gradient(45deg,  #fffed2, #fff47b, #fffb00);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Instagram button specific style */
+.button.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.button.instagram:hover {
+  background: linear-gradient(45deg, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.instagram:active {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Facebook button specific style */
+.button.facebook {
+  background: linear-gradient(45deg, #3b5998, #5284e9);
+}
+
+.button.facebook:hover {
+  background: linear-gradient(45deg, #5284e9, #3b5998);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.facebook:active {
+  background: linear-gradient(45deg, #3b5998, #5284e9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Discord button specific style */
+.button.discord {
+  background: linear-gradient(45deg, #7289DA, #99AAB5);
+}
+
+.button.discord:hover {
+  background: linear-gradient(45deg, #99AAB5, #7289DA);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.discord:active {
+  background: linear-gradient(45deg, #7289DA, #99AAB5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* View Projects button specific style */
+.button.view-projects {
+  background: linear-gradient(45deg, #FF6B6B, #134F3C);
+  padding: 20px 60px; /* Make this button wider */
+  margin-top: 50px;
+}
+
+.button.view-projects:hover {
+  background: linear-gradient(45deg, #134F3C, #FF6B6B);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button.view-projects:active {
+  background: linear-gradient(45deg, #FF6B6B, #134F3C);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .simple-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+  }
+
+  .button {
+    align-self: center;
+    width: 80%; /* Make buttons take up more space on smaller screens */
+    max-width: 50%; /* Add max-width to prevent buttons from getting too wide */
+    margin-bottom: 10px; /* Add space between stacked buttons */
+  }
+
+  .button.view-projects {
+    width: 50%; /* Make View Projects button wider on smaller screens */
+    max-width: 400px; /* Add max-width to prevent it from getting too wide */
+  }
+}
