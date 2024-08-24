@@ -12,60 +12,113 @@
 
     <main>
         <section id="project-title">
-            <div class="container">
-                <h2>Alarm System</h2>            
-            </div>
-        </section>
+        <div class="container">
+            <h2>Automated Alarm System</h2>            
+        </div>
+    </section>
 
-        <section id="project-example-images">
-            <div class="container">
-                <!-- Big Display Image -->
-                <div class="big-image">
-                    <img id="mainImage" src="../../data/project_images/blackjack/screen_0.png" alt="Main Image">
+    <section class="project-story">
+        <div class="container">
+            <h2>Overview</h2>
+            <p>
+                This project upgrades a basic alarm system into a sophisticated security solution using a Raspberry Pi. The enhanced system features advanced alert capabilities, a customizable user experience, and improved functionality for monitoring and managing home security.
+            </p>
+        </div>
+    </section>
+
+    <section id="project-example-images">
+        <div class="container">
+            <div class="big-image">
+                <img id="mainImage" src="../../data/project_images/blackjack/screen_0.png" alt="Main Image">
+            </div>
+            <h2>Project Photos</h2>
+            <div class="image-row">
+                <img src="../../data/project_images/blackjack/screen_0.png" alt="Image 1" onclick="changeMainImage(this.src)">
+                <img src="../../data/project_images/blackjack/screen_1.png" alt="Image 2" onclick="changeMainImage(this.src)">
+                <img src="../../data/project_images/blackjack/screen_2.png" alt="Image 3" onclick="changeMainImage(this.src)">
+                <img src="../../data/project_images/blackjack/screen_3.png" alt="Image 4" onclick="changeMainImage(this.src)">
+                <img src="../../data/project_images/blackjack/screen_4.png" alt="Image 5" onclick="changeMainImage(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <section class="project-story">
+        <div class="container">
+            <h2>Project Story</h2>
+            <div class="project-section">
+                <img src="../../data/project_images/blackjack/hardware.png" alt="Hardware Image">
+                <div class="project-section-text">
+                    <p>
+                        The original alarm system was limited to indicating which door was open by lighting up corresponding LEDs. To enhance its capabilities, I developed a system that integrates a Raspberry Pi to monitor and respond to various events. The initial version involved soldering wires to the alert lights, connecting them to a Raspberry Pi, which measured voltages to detect open doors and low battery conditions through LED flash patterns. This system utilized a simple LCD screen to display modes and a button to switch between the modes.
+                        The subsequent version further expanded the user interface and available features. A fully customized GUI was created using Pygame, offering complex, reusable, and configurable parameters to suit user needs.
+                    </p>
                 </div>
-                <!-- Image Options -->
-                <!--<h3>[Unsolved, Solved]</h3>-->
-                <h2>Project Photos</h2>
-                <!-- Row of Images -->
-                <div class="image-row">
-                    <img src="../../data/project_images/blackjack/screen_0.png" alt="Image 1" onclick="changeMainImage(this.src)">
-                    <img src="../../data/project_images/blackjack/screen_1.png" alt="Image 2" onclick="changeMainImage(this.src)">
-                    <img src="../../data/project_images/blackjack/screen_2.png" alt="Image 3" onclick="changeMainImage(this.src)">
-                    <img src="../../data/project_images/blackjack/screen_3.png" alt="Image 4" onclick="changeMainImage(this.src)">
-                    <img src="../../data/project_images/blackjack/screen_4.png" alt="Image 4" onclick="changeMainImage(this.src)">
-
-                </div>
             </div>
-        </section>
-        
-        
+        </div>
+    </section>
 
-        <section id="project-story">
-            <div class="container">
-                <h2>Alarm System</h2> 
-                <!--if you want to check it out on the home page-->
-                <p class="no-typing-effect">
-                    Alarm!!!
-                </p>           
-            </div>
-        </section>
-        
-
-        <section id="project-videos">
-            <div class="container">
-                <h2>Videos</h2>
-                <div class="videos-container">
-                    <!-- Video 1 goes here -->
-                    <div class="video-box" id="webscraping-video">
-                        <video controls>
-                            <source src="../../data/project_videos/blackjack/blackjack_show.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>This shows a full play through of the game and all of it's features.</p>
+    <section class="project-story">
+        <div class="container">
+            <h2>Hardware Components</h2>
+            <div class="project-section">
+                <img src="../../data/project_images/blackjack/hardware_components.png" alt="Hardware Components">
+                <div class="project-section-text">
+                    <div class="bullet-point">
+                        <strong>Alarm System:</strong> Utilized a budget-friendly 4-channel RFID alarm system from Amazon.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Integration:</strong> LED leads are connected to a Pi Hat on the Raspberry Pi, which reads voltages. The alarm system’s power cord and onboard beeper are routed through relays controlled by the Raspberry Pi.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Connectivity:</strong> The system connects to the home network via a router and is powered by a UPS, with an HDMI cable linking to the control panel.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Additional Sensors:</strong> Integrated a motion sensor for enhanced detection capabilities.
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="project-story">
+        <div class="container">
+            <h2>Main Screen Features</h2>
+            <div class="project-section">
+                <img src="../../data/project_images/blackjack/main_screen.png" alt="Main Screen">
+                <div class="project-section-text">
+                    <div class="bullet-point">
+                        <strong>Top Buttons:</strong> Settings, mode selector (Auto Home, Home Day and Night, Away, Out), and Wi-Fi status indicator.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Bottom Status Bar:</strong> Displays the status of sensors with color-coded indicators: open (red), closed (green), errors (yellow), no power (black), and unknown (gray).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-story">
+        <div class="container">
+            <h2>Settings Screen Enhancements</h2>
+            <div class="project-section">
+                <img src="../../data/project_images/blackjack/settings_screen.png" alt="Settings Screen">
+                <div class="project-section-text">
+                    <div class="bullet-point">
+                        <strong>Master Sound Settings:</strong> Adjust sound alerts for various conditions.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Mode Behavior Configuration:</strong> Customize how each mode responds to detected events.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Lifetime Statistics:</strong> View detailed analytics on system performance and usage.
+                    </div>
+                    <div class="bullet-point">
+                        <strong>Notification Management:</strong> Configure email and SMS alert behavior.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
 
     <!--script stuff-->

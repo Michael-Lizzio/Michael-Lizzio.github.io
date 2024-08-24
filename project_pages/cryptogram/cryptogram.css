@@ -108,91 +108,44 @@ h2 {
 
 /* ---------------------------------------------------------------------*/
 /* Enhanced Styles for the project-story section */
+/* Enhanced Styles for the project-story section */
 #project-story {
     background-color: #f9f9f9;
-    padding: 30px;
+    padding: 20px; /* Adjusted padding for mobile */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin: 10px 0; /* Reduced margin for mobile */
     opacity: 1;
-    transform: translateY(20px);
-    animation: fadeAndSlide 1s ease-in-out forwards;
+    transform: translateY(0); /* Removed animation for simplicity */
 }
 
 .typing-effect {
     display: block;
-    max-height: 0;
-    overflow: hidden;
-    animation: none;
+    max-height: none; /* Ensure full content visibility */
+    overflow: visible; /* Ensure full content visibility */
     border-right: .15em solid rgb(249, 249, 249); /* The cursor */
-}
-
-.animate-typing {
-    max-height: 1000px;  /* Adjust this if your content is longer */
-    animation: typing 10s cubic-bezier(0, 1, 0, 1); /* Adjust timing for faster or slower typing */
-}
-
-.animate-typing {
-    animation: typing 5s steps(400, end), blink .75s step-end infinite;
-}
-
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-
-
-
-@keyframes fadeAndSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    white-space: normal; /* Allow text to wrap on small screens */
+    animation: none; /* Removed animation for simplicity */
 }
 
 #project-story h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 24px; /* Adjusted font size for mobile */
+    margin-bottom: 15px; /* Reduced margin for mobile */
     color: #333;
 }
 
 #project-story p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 15px;
+    font-size: 16px; /* Adjusted font size for mobile */
+    line-height: 1.5; /* Adjusted line height for better readability */
+    margin-bottom: 10px; /* Reduced margin for mobile */
     color: #555;
 }
 
 #project-story blockquote {
     background-color: #fff;
     border-left: 4px solid #3498db;
-    padding: 10px 20px;
+    padding: 10px 15px; /* Adjusted padding for mobile */
     margin: 0;
     font-style: italic;
     color: #666;
@@ -200,6 +153,26 @@ h2 {
 
 #project-story p:last-child {
     margin-bottom: 0;
+}
+
+/* Ensure responsive typography */
+@media (max-width: 600px) {
+    #project-story {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    #project-story h2 {
+        font-size: 22px;
+    }
+
+    #project-story p {
+        font-size: 14px;
+    }
+
+    #project-story blockquote {
+        padding: 10px;
+    }
 }
 
 

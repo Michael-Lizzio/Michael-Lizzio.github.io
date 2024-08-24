@@ -47,17 +47,17 @@
                     finished my first big project, a Wordle solver, and had learned a lot in the 
                     process (this is another one of my projects that will soon be displayed on the home page). 
                     The day before school break, my computer science teacher had an optional fun lesson about cryptography;
-                     I already knew about cryptograms from my dad and wanted to do some more work on my other 
-                     projects, but, as class ended I grabbed an unsolved puzzle on my way out, because I knew my dad 
-                     likes doing them. After I got home I showed it to my dad and he challenged me to solve it with him.
-                      So I made another copy and we began. My dad was flying through it; I started to solve it, only
-                       to get lost in the idea of creating a computer algorithm to solve one. So during the school break 
-                       I spent most of my time in front of my white board creating a backtracking algorithm without 
-                       even knowing what one was! I got really far and almost had it working. I showed what
-                        I had to my dad and he suggested that I try a very simple puzzle with only one long word to see if it would work. 
-                        I used the encrypted version of the word "BEGINNING"… AND IT WORKED! I was so happy, it was already late at night but I was 
-                        willing to stay up until I got it to work. The next day I got a rough version to solve all
-                         sorts of puzzles. From there I only continued to improve and optimize the program. 
+                    I already knew about cryptograms from my dad and wanted to do some more work on my other 
+                    projects, but, as class ended I grabbed an unsolved puzzle on my way out, because I knew my dad 
+                    likes doing them. After I got home I showed it to my dad and he challenged me to solve it with him.
+                    So I made another copy and we began. My dad was flying through it; I started to solve it, only
+                    to get lost in the idea of creating a computer algorithm to solve one. So during the school break 
+                    I spent most of my time in front of my white board creating a backtracking algorithm without 
+                    even knowing what one was! I got really far and almost had it working. I showed what
+                    I had to my dad and he suggested that I try a very simple puzzle with only one long word to see if it would work. 
+                    I used the encrypted version of the word "BEGINNING"… AND IT WORKED! I was so happy, it was already late at night but I was 
+                    willing to stay up until I got it to work. The next day I got a rough version to solve all
+                    sorts of puzzles. From there I only continued to improve and optimize the program. 
                 </p>           
             </div>
         </section>
@@ -145,19 +145,19 @@
                     My program uses what some would call a brute force approach and consists of a few main parts. 
                     First we have the organizer; this organizes the words in a way to make more efficient guesses. 
                     It usually starts with the largest words of the puzzle first, contrary to a typical human’s strategy.
-                     My code has access to 22 word lists organized by word length. The lists are optimized in order of 
-                     common to uncommon words; this is one of my optimization strategies. For example the beginning of word_list2 would have AS, AT, BE, BY, DO, GO… My code 
-                     starts with a encrypted word like BWGQHFTL, and then tries every 8 letter word to see if their letters match up.
-                     For example, QUESTION would work. Then it would move onto the next word 
-                     like OFLWHGQ and find that MINUTES works with QUESTION because their letters line up. The more we progress 
-                     through the puzzle, the less likely a word will work because our vocabulary expands. For example right now 
-                     we have (QUESTION = BWGQHFTL and MINUTES = OFLWHGQ) F=I, H=T, L=N, Q=S, G=E W=U in both words. The issue is 
-                     when there are no more possibilities. At some point there were 2 or more possibilities and the algorithm just 
-                     chose the first one it came across. We would then have to back track to where we made that wrong guess and try 
-                     to find another one that would work further along in the program. It does this until it makes it to the end, where 
-                     In some cases there might be a wrong word or two. For example, FP could be either IF or ID (my program doesn't take 
-                     apostrophes into account). My program handles this by allowing the user to say which word they would like to try again, 
-                     and then it usually fixes it.  
+                    My code has access to 22 word lists organized by word length. The lists are optimized in order of 
+                    common to uncommon words; this is one of my optimization strategies. For example the beginning of word_list2 would have AS, AT, BE, BY, DO, GO… My code 
+                    starts with a encrypted word like BWGQHFTL, and then tries every 8 letter word to see if their letters match up.
+                    For example, QUESTION would work. Then it would move onto the next word 
+                    like OFLWHGQ and find that MINUTES works with QUESTION because their letters line up. The more we progress 
+                    through the puzzle, the less likely a word will work because our vocabulary expands. For example right now 
+                    we have (QUESTION = BWGQHFTL and MINUTES = OFLWHGQ) F=I, H=T, L=N, Q=S, G=E W=U in both words. The issue is 
+                    when there are no more possibilities. At some point there were 2 or more possibilities and the algorithm just 
+                    chose the first one it came across. We would then have to back track to where we made that wrong guess and try 
+                    to find another one that would work further along in the program. It does this until it makes it to the end, where 
+                    In some cases there might be a wrong word or two. For example, FP could be either IF or ID (my program doesn't take 
+                    apostrophes into account). My program handles this by allowing the user to say which word they would like to try again, 
+                    and then it usually fixes it.  
                 </p>  
                 <h3>Just by guessing QUESTION for the first encoded word (BWGQHFTL), it partially fills in a bunch of the other encrypted words.</h3>
                 <h4>BWGQHFTL OFLWHGQ PGOZFLQ CTPGDGP ETGQ</h4> 
