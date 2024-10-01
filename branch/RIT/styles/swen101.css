@@ -1,0 +1,48 @@
+/* General styling for the body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f5;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden; /* Prevents scrollbars when elements move */
+}
+
+/* Box styling */
+.box {
+  position: absolute; /* Allows for movement */
+  padding: 20px;
+  background-color: #e0e0ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Smooths out movements */
+}
+
+/* Specific styling for content within boxes */
+p,
+ul {
+  font-size: 18px;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+a {
+  font-size: 20px;
+  color: #007acc;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ul li {
+  margin: 10px 0;
+}
