@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects Archive</title>
+    <!-- Link to main styles -->
+    <link rel="stylesheet" href="styles/archive.css">
+    <!-- Link to theme styles -->
+    <link rel="stylesheet" href="styles/archive-themes.css">
+    <script src="scripts/archive.js" defer></script>
+</head>
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+    <header>
+        <h1>All Projects</h1>
+        <!-- Theme Selector and Randomize Button -->
+        <div class="theme-controls">
+            <label for="theme-selector">Select Theme:</label>
+            <select id="theme-selector">
+                <!-- Options will be added dynamically by JavaScript -->
+            </select>
+            <button id="randomize-button">Randomize Theme</button>
+        </div>
+    </header>
+    <section id="project-archive"></section>
+    <section id="project-archive-mobile" class="mobile-layout"></section>
+    
+    <!-- Load and inject the navbar -->
+    <script>
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('../tools/navbar/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching navbar HTML:', error));
+    </script>
+</body>
+</html>

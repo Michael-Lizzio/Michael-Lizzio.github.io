@@ -1,0 +1,511 @@
+/* Default Theme */
+:root {
+  --background-color: #000000;
+  --header-color: #ffffff;
+  --text-color: #ffffff;
+  --secondary-text-color: #cccccc;
+  --table-header-background: #333333;
+  --table-border-color: #666666;
+  --project-bg-color: #333333;
+  --highlight-color: #c9a66b;
+  --button-background: #c9a66b;
+  --button-text-color: #000000;
+  --hover-background-color: #1a1a1a;
+  --shadow-color: rgba(0, 0, 0, 0.9);
+}
+
+/*Orginal */
+.theme-insperation {
+  --background-color: #0a192f;
+  --header-color: #64ffda;
+  --text-color: #ccd6f6;
+  --secondary-text-color: #8892b0;
+  --table-header-background: #112240;
+  --table-border-color: #233554;
+  --project-bg-color: #112240;
+  --highlight-color: #64ffda;
+  --button-background: #64ffda;
+  --button-text-color: #0a192f;
+  --hover-background-color: #1e2a38;
+  --shadow-color: rgba(2, 12, 27, 0.7);
+}
+
+/* Theme 1 - Forest Green */
+.theme-forest-green {
+  --background-color: #0b3d0b;
+  --header-color: #9bdeac;
+  --text-color: #dfffd9;
+  --secondary-text-color: #8fbf8f;
+  --table-header-background: #124012;
+  --table-border-color: #1e5d1e;
+  --project-bg-color: #124012;
+  --highlight-color: #9bdeac;
+  --button-background: #9bdeac;
+  --button-text-color: #0b3d0b;
+  --hover-background-color: #1a521a;
+  --shadow-color: rgba(11, 61, 11, 0.7);
+}
+
+/* Theme 2 - Ocean Blue */
+.theme-ocean-blue {
+  --background-color: #001f3f;
+  --header-color: #0074d9;
+  --text-color: #7fdbff;
+  --secondary-text-color: #39ace7;
+  --table-header-background: #003366;
+  --table-border-color: #004c99;
+  --project-bg-color: #003366;
+  --highlight-color: #0074d9;
+  --button-background: #0074d9;
+  --button-text-color: #001f3f;
+  --hover-background-color: #004080;
+  --shadow-color: rgba(0, 31, 63, 0.7);
+}
+
+/* Theme 3 - Sunset Orange */
+.theme-sunset-orange {
+  --background-color: #4b1d0a;
+  --header-color: #ff704d;
+  --text-color: #ffd7cc;
+  --secondary-text-color: #e65c34;
+  --table-header-background: #5a2310;
+  --table-border-color: #853b20;
+  --project-bg-color: #5a2310;
+  --highlight-color: #ff704d;
+  --button-background: #ff704d;
+  --button-text-color: #4b1d0a;
+  --hover-background-color: #6a2b1a;
+  --shadow-color: rgba(75, 29, 10, 0.7);
+}
+
+/* Theme 4 - Lavender */
+.theme-lavender {
+  --background-color: #2d133b;
+  --header-color: #e0b3ff;
+  --text-color: #f2e6ff;
+  --secondary-text-color: #c299e6;
+  --table-header-background: #3a194d;
+  --table-border-color: #5c1f73;
+  --project-bg-color: #3a194d;
+  --highlight-color: #e0b3ff;
+  --button-background: #e0b3ff;
+  --button-text-color: #2d133b;
+  --hover-background-color: #4a1e5e;
+  --shadow-color: rgba(45, 19, 59, 0.7);
+}
+
+/* Theme 5 - Coral Reef */
+.theme-coral-reef {
+  --background-color: #251c16;
+  --header-color: #ff6f61;
+  --text-color: #ffe6e1;
+  --secondary-text-color: #ff9985;
+  --table-header-background: #33221f;
+  --table-border-color: #55332c;
+  --project-bg-color: #33221f;
+  --highlight-color: #ff6f61;
+  --button-background: #ff6f61;
+  --button-text-color: #251c16;
+  --hover-background-color: #402b28;
+  --shadow-color: rgba(37, 28, 22, 0.7);
+}
+
+/* Theme 6 - Royal Purple */
+.theme-royal-purple {
+  --background-color: #1d133c;
+  --header-color: #a564ff;
+  --text-color: #dfd1ff;
+  --secondary-text-color: #8e72d6;
+  --table-header-background: #291f52;
+  --table-border-color: #3f2e77;
+  --project-bg-color: #291f52;
+  --highlight-color: #a564ff;
+  --button-background: #a564ff;
+  --button-text-color: #1d133c;
+  --hover-background-color: #34266b;
+  --shadow-color: rgba(29, 19, 60, 0.7);
+}
+
+/* Theme 7 - Golden Glow */
+.theme-golden-glow {
+  --background-color: #3b2a1e;
+  --header-color: #ffd700;
+  --text-color: #fff2cc;
+  --secondary-text-color: #e6c300;
+  --table-header-background: #4d351f;
+  --table-border-color: #805b29;
+  --project-bg-color: #4d351f;
+  --highlight-color: #ffd700;
+  --button-background: #ffd700;
+  --button-text-color: #3b2a1e;
+  --hover-background-color: #5e452a;
+  --shadow-color: rgba(59, 42, 30, 0.7);
+}
+
+/* Theme 8 - Midnight Red */
+.theme-midnight-red {
+  --background-color: #2b0e14;
+  --header-color: #ff4d4d;
+  --text-color: #ffd2d2;
+  --secondary-text-color: #d94c4c;
+  --table-header-background: #3a131b;
+  --table-border-color: #5a1f2c;
+  --project-bg-color: #3a131b;
+  --highlight-color: #ff4d4d;
+  --button-background: #ff4d4d;
+  --button-text-color: #2b0e14;
+  --hover-background-color: #45181f;
+  --shadow-color: rgba(43, 14, 20, 0.7);
+}
+
+/* Theme 9 - Arctic Ice */
+.theme-arctic-ice {
+  --background-color: #0a1e2e;
+  --header-color: #62b6ff;
+  --text-color: #d4eaff;
+  --secondary-text-color: #5eaad6;
+  --table-header-background: #11344b;
+  --table-border-color: #1a4b72;
+  --project-bg-color: #11344b;
+  --highlight-color: #62b6ff;
+  --button-background: #62b6ff;
+  --button-text-color: #0a1e2e;
+  --hover-background-color: #1a2e40;
+  --shadow-color: rgba(10, 30, 46, 0.7);
+}
+
+/* Theme 10 - Pink Blossom */
+.theme-pink-blossom {
+  --background-color: #3b0b25;
+  --header-color: #ff99cc;
+  --text-color: #ffe6f2;
+  --secondary-text-color: #e68fb3;
+  --table-header-background: #4d0e33;
+  --table-border-color: #73134f;
+  --project-bg-color: #4d0e33;
+  --highlight-color: #ff99cc;
+  --button-background: #ff99cc;
+  --button-text-color: #3b0b25;
+  --hover-background-color: #600e3f;
+  --shadow-color: rgba(59, 11, 37, 0.7);
+}
+
+/* Theme 11 - Autumn Maple */
+.theme-autumn-maple {
+  --background-color: #4c2b11;
+  --header-color: #ff914d;
+  --text-color: #ffe5cc;
+  --secondary-text-color: #e67f33;
+  --table-header-background: #603815;
+  --table-border-color: #8f4d1e;
+  --project-bg-color: #603815;
+  --highlight-color: #ff914d;
+  --button-background: #ff914d;
+  --button-text-color: #4c2b11;
+  --hover-background-color: #704820;
+  --shadow-color: rgba(76, 43, 17, 0.7);
+}
+
+/* Theme 12 - Slate Gray */
+.theme-slate-gray {
+  --background-color: #20232a;
+  --header-color: #61dafb;
+  --text-color: #f1f1f1;
+  --secondary-text-color: #868e96;
+  --table-header-background: #2b2e35;
+  --table-border-color: #414854;
+  --project-bg-color: #2b2e35;
+  --highlight-color: #61dafb;
+  --button-background: #61dafb;
+  --button-text-color: #20232a;
+  --hover-background-color: #32343c;
+  --shadow-color: rgba(32, 35, 42, 0.7);
+}
+
+/* Theme 13 - Cherry Blossom */
+.theme-cherry-blossom {
+  --background-color: #331b26;
+  --header-color: #ff69b4;
+  --text-color: #ffe4e1;
+  --secondary-text-color: #ff8da1;
+  --table-header-background: #41232e;
+  --table-border-color: #6a2e47;
+  --project-bg-color: #41232e;
+  --highlight-color: #ff69b4;
+  --button-background: #ff69b4;
+  --button-text-color: #331b26;
+  --hover-background-color: #542c38;
+  --shadow-color: rgba(51, 27, 38, 0.7);
+}
+
+/* Theme 14 - Cool Mint */
+.theme-cool-mint {
+  --background-color: #0e2f29;
+  --header-color: #63d2b5;
+  --text-color: #d2fff2;
+  --secondary-text-color: #52bda3;
+  --table-header-background: #14443c;
+  --table-border-color: #216659;
+  --project-bg-color: #14443c;
+  --highlight-color: #63d2b5;
+  --button-background: #63d2b5;
+  --button-text-color: #0e2f29;
+  --hover-background-color: #1b3d35;
+  --shadow-color: rgba(14, 47, 41, 0.7);
+}
+
+/* Theme 15 - Amber Glow */
+.theme-amber-glow {
+  --background-color: #4a2800;
+  --header-color: #ffbf00;
+  --text-color: #ffe8cc;
+  --secondary-text-color: #e6a500;
+  --table-header-background: #5b3000;
+  --table-border-color: #8a4700;
+  --project-bg-color: #5b3000;
+  --highlight-color: #ffbf00;
+  --button-background: #ffbf00;
+  --button-text-color: #4a2800;
+  --hover-background-color: #704000;
+  --shadow-color: rgba(74, 40, 0, 0.7);
+}
+
+/* Theme 16 - Slate Blue */
+.theme-slate-blue {
+  --background-color: #2a2d3e;
+  --header-color: #809fff;
+  --text-color: #d9e1ff;
+  --secondary-text-color: #668cff;
+  --table-header-background: #363a54;
+  --table-border-color: #4a5a80;
+  --project-bg-color: #363a54;
+  --highlight-color: #809fff;
+  --button-background: #809fff;
+  --button-text-color: #2a2d3e;
+  --hover-background-color: #4c5173;
+  --shadow-color: rgba(42, 45, 62, 0.7);
+}
+
+/* Theme 17 - Raspberry Red */
+.theme-raspberry-red {
+  --background-color: #4d1a1a;
+  --header-color: #ff4d79;
+  --text-color: #ffd1e8;
+  --secondary-text-color: #e63366;
+  --table-header-background: #661f2f;
+  --table-border-color: #993352;
+  --project-bg-color: #661f2f;
+  --highlight-color: #ff4d79;
+  --button-background: #ff4d79;
+  --button-text-color: #4d1a1a;
+  --hover-background-color: #7a263b;
+  --shadow-color: rgba(77, 26, 26, 0.7);
+}
+
+/* Theme 18 - Denim Blue */
+.theme-denim-blue {
+  --background-color: #1f3c68;
+  --header-color: #4da3ff;
+  --text-color: #d6e8ff;
+  --secondary-text-color: #73b3ff;
+  --table-header-background: #284c82;
+  --table-border-color: #406da1;
+  --project-bg-color: #284c82;
+  --highlight-color: #4da3ff;
+  --button-background: #4da3ff;
+  --button-text-color: #1f3c68;
+  --hover-background-color: #335d95;
+  --shadow-color: rgba(31, 60, 104, 0.7);
+}
+
+/* Theme 19 - Cobalt Teal */
+.theme-cobalt-teal {
+  --background-color: #0b393e;
+  --header-color: #00d1d1;
+  --text-color: #d1ffff;
+  --secondary-text-color: #33b8b8;
+  --table-header-background: #0e4d52;
+  --table-border-color: #196f73;
+  --project-bg-color: #0e4d52;
+  --highlight-color: #00d1d1;
+  --button-background: #00d1d1;
+  --button-text-color: #0b393e;
+  --hover-background-color: #116066;
+  --shadow-color: rgba(11, 57, 62, 0.7);
+}
+
+/* Theme 20 - Royal Emerald */
+.theme-royal-emerald {
+  --background-color: #1a3b25;
+  --header-color: #2ed573;
+  --text-color: #d4ffea;
+  --secondary-text-color: #26c268;
+  --table-header-background: #224e33;
+  --table-border-color: #336e4d;
+  --project-bg-color: #224e33;
+  --highlight-color: #2ed573;
+  --button-background: #2ed573;
+  --button-text-color: #1a3b25;
+  --hover-background-color: #2b5d40;
+  --shadow-color: rgba(26, 59, 37, 0.7);
+}
+
+/* Theme - Solarized Light */
+.theme-solarized-light {
+  --background-color: #fdf6e3;
+  --header-color: #586e75;
+  --text-color: #657b83;
+  --secondary-text-color: #93a1a1;
+  --table-header-background: #eee8d5;
+  --table-border-color: #d3caa7;
+  --project-bg-color: #eee8d5;
+  --highlight-color: #268bd2;
+  --button-background: #268bd2;
+  --button-text-color: #fdf6e3;
+  --hover-background-color: #e4ddc7;
+  --shadow-color: rgba(253, 246, 227, 0.7);
+}
+
+/* Theme - Solarized Dark */
+.theme-solarized-dark {
+  --background-color: #002b36;
+  --header-color: #839496;
+  --text-color: #93a1a1;
+  --secondary-text-color: #657b83;
+  --table-header-background: #073642;
+  --table-border-color: #0b4a55;
+  --project-bg-color: #073642;
+  --highlight-color: #b58900;
+  --button-background: #b58900;
+  --button-text-color: #002b36;
+  --hover-background-color: #0a3a44;
+  --shadow-color: rgba(0, 43, 54, 0.7);
+}
+
+/* Theme - Monokai */
+.theme-monokai {
+  --background-color: #272822;
+  --header-color: #f8f8f2;
+  --text-color: #f8f8f2;
+  --secondary-text-color: #75715e;
+  --table-header-background: #3e3d32;
+  --table-border-color: #5b5a4f;
+  --project-bg-color: #3e3d32;
+  --highlight-color: #a6e22e;
+  --button-background: #a6e22e;
+  --button-text-color: #272822;
+  --hover-background-color: #49483e;
+  --shadow-color: rgba(39, 40, 34, 0.7);
+}
+
+/* Theme - Dracula */
+.theme-dracula {
+  --background-color: #282a36;
+  --header-color: #f8f8f2;
+  --text-color: #f8f8f2;
+  --secondary-text-color: #6272a4;
+  --table-header-background: #44475a;
+  --table-border-color: #6272a4;
+  --project-bg-color: #44475a;
+  --highlight-color: #bd93f9;
+  --button-background: #bd93f9;
+  --button-text-color: #282a36;
+  --hover-background-color: #383a59;
+  --shadow-color: rgba(40, 42, 54, 0.7);
+}
+
+/* Theme - Material Light */
+.theme-material-light {
+  --background-color: #ffffff;
+  --header-color: #3f51b5;
+  --text-color: #212121;
+  --secondary-text-color: #757575;
+  --table-header-background: #e0e0e0;
+  --table-border-color: #bdbdbd;
+  --project-bg-color: #e0e0e0;
+  --highlight-color: #ff4081;
+  --button-background: #ff4081;
+  --button-text-color: #ffffff;
+  --hover-background-color: #f5f5f5;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Theme - Material Dark */
+.theme-material-dark {
+  --background-color: #212121;
+  --header-color: #ff4081;
+  --text-color: #e0e0e0;
+  --secondary-text-color: #bdbdbd;
+  --table-header-background: #424242;
+  --table-border-color: #616161;
+  --project-bg-color: #424242;
+  --highlight-color: #3f51b5;
+  --button-background: #3f51b5;
+  --button-text-color: #ffffff;
+  --hover-background-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Theme - High Contrast */
+.theme-high-contrast {
+  --background-color: #000000;
+  --header-color: #ffffff;
+  --text-color: #ffffff;
+  --secondary-text-color: #cccccc;
+  --table-header-background: #333333;
+  --table-border-color: #666666;
+  --project-bg-color: #333333;
+  --highlight-color: #ff0000;
+  --button-background: #ff0000;
+  --button-text-color: #ffffff;
+  --hover-background-color: #1a1a1a;
+  --shadow-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Theme - Pastel Dreams */
+.theme-pastel-dreams {
+  --background-color: #fdf1f1;
+  --header-color: #ffb3ba;
+  --text-color: #6b6b6b;
+  --secondary-text-color: #c3c3c3;
+  --table-header-background: #ffe6e6;
+  --table-border-color: #ffcccc;
+  --project-bg-color: #ffe6e6;
+  --highlight-color: #ffdfba;
+  --button-background: #ffdfba;
+  --button-text-color: #6b6b6b;
+  --hover-background-color: #ffe0e0;
+  --shadow-color: rgba(253, 241, 241, 0.7);
+}
+
+/* Theme - Earth Tones */
+.theme-earth-tones {
+  --background-color: #3b3024;
+  --header-color: #c9a66b;
+  --text-color: #f0e6d6;
+  --secondary-text-color: #b89c7d;
+  --table-header-background: #4d3d2e;
+  --table-border-color: #80684d;
+  --project-bg-color: #4d3d2e;
+  --highlight-color: #c9a66b;
+  --button-background: #c9a66b;
+  --button-text-color: #3b3024;
+  --hover-background-color: #5e4e3f;
+  --shadow-color: rgba(59, 48, 36, 0.7);
+}
+
+/* Theme - Retro Neon */
+.theme-retro-neon {
+  --background-color: #1a1a1a;
+  --header-color: #ff6ec7;
+  --text-color: #f0f0f0;
+  --secondary-text-color: #7df9ff;
+  --table-header-background: #262626;
+  --table-border-color: #404040;
+  --project-bg-color: #262626;
+  --highlight-color: #39ff14;
+  --button-background: #39ff14;
+  --button-text-color: #1a1a1a;
+  --hover-background-color: #333333;
+  --shadow-color: rgba(26, 26, 26, 0.7);
+}

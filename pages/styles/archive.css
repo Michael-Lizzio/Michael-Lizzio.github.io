@@ -1,0 +1,181 @@
+/* styles/archive.css */
+
+/* Color variables */
+:root {
+  --background-color: #0a192f;
+  --header-color: #64ffda;
+  --text-color: #ccd6f6;
+  --secondary-text-color: #8892b0;
+  --table-header-background: #112240;
+  --table-border-color: #233554;
+  --project-bg-color: #112240;
+  --highlight-color: #64ffda;
+  --button-background: #64ffda;
+  --button-text-color: #0a192f;
+  --hover-background-color: #1e2a38;
+  --shadow-color: rgba(2, 12, 27, 0.7);
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--project-bg-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+h1 {
+  color: var(--header-color);
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Theme Controls Styling */
+.theme-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#theme-selector {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--table-border-color);
+  background-color: var(--project-bg-color);
+  color: var(--text-color);
+}
+
+#randomize-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#randomize-button:hover {
+  background-color: var(--highlight-color);
+}
+
+#project-archive,
+#project-archive-mobile {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: none;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 40px;
+}
+
+.project-table thead tr {
+  background-color: var(--table-header-background);
+}
+
+.project-table th,
+.project-table td {
+  padding: 20px;
+  border-bottom: 1px solid var(--table-border-color);
+  text-align: left;
+}
+
+.project-table th {
+  color: var(--highlight-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--table-header-background);
+  z-index: 1;
+}
+
+.project-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.project-table tbody tr:hover {
+  background-color: var(--hover-background-color);
+}
+
+.project-table td {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+}
+
+.project-table td:first-child {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.project-table a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.project-table a:hover {
+  color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #project-archive-mobile {
+    display: block;
+  }
+
+  .project-table th,
+  .project-table td {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #project-archive {
+    display: block;
+  }
+}
