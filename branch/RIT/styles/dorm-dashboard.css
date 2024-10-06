@@ -1,0 +1,112 @@
+:root {
+  /* Base Background and Text */
+  --background-color: #1c1c1c; /* Dark base for the overall background */
+  --text-color: #e0e0e0; /* Light text color for readability */
+
+  /* Heading and Section Colors */
+  --heading-color: #ff6600; /* Subtle touch of RIT's orange */
+  --section-background-color: #262626; /* Slightly lighter than the main background */
+  --section-heading-color: #cccccc; /* Light gray for section headings */
+
+  /* Button Colors */
+  --button-background-color: #444444; /* Neutral dark gray for buttons */
+  --button-hover-color: #ff6600; /* Orange hover effect to reflect RIT colors without overpowering */
+
+  /* Table Colors */
+  --table-border-color: #d0d0d0; /* Soft border color for tables */
+  --table-header-background-color: #333333; /* Dark background for table headers */
+  --table-header-text-color: #ffffff; /* White text for table headers */
+  --table-row-alt-background-color: #2e2e2e; /* Alternate row color for tables */
+
+  /* Input Border Color */
+  --input-border-color: #999999; /* Gray border for input fields */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--heading-color);
+  margin-bottom: 20px;
+}
+
+section {
+  background-color: var(--section-background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+
+#control-panel h2,
+#statistics h2,
+#dorm-log h2 {
+  color: var(--section-heading-color);
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: var(--button-background-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--input-border-color);
+}
+
+#dorm-log table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#dorm-log table,
+#dorm-log th,
+#dorm-log td {
+  border: 1px solid var(--table-border-color);
+}
+
+#dorm-log th,
+#dorm-log td {
+  padding: 10px;
+  text-align: left;
+}
+
+#dorm-log th {
+  background-color: var(--table-header-background-color);
+  color: var(--table-header-text-color);
+}
+
+#dorm-log tbody tr:nth-child(even) {
+  background-color: var(--table-row-alt-background-color);
+}
+
+#dorm-log button {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+}

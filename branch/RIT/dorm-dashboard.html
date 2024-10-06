@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorm Dashboard</title>
+    <link rel="stylesheet" href="styles/dorm-dashboard.css">
+    <script defer src="scripts/dorm-dashboard.js"></script>
+</head>
+<body>
+    <h1>Dorm Dashboard</h1>
+    <section id="control-panel">
+        <h2>Lights</h2>
+        <button id="lights-off" onclick="toggleLights('off')">OFF</button>
+        <button id="lights-on" onclick="toggleLights('on')">ON</button>
+        
+        <h2>Temperature</h2>
+        <p>Current: <span id="current-temp">71</span>°F</p>
+        <label for="set-temp">Set:</label>
+        <input type="number" id="set-temp" value="70" onchange="setTemperature()">
+        <p>Current Action: <span id="current-action">Cooling</span></p>
+    </section>
+
+    <section id="dorm-log">
+        <h2>Log</h2>
+        <button onclick="downloadLog()">Download</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Notes</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="log-entries">
+                <!-- Log entries will be dynamically loaded here -->
+            </tbody>
+        </table>
+        <button onclick="loadMoreLogs()">Load More</button>
+    </section>
+</body>
+</html>
