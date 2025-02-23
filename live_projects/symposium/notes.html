@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes</title>
+  <link rel="stylesheet" href="assets/css/notes.css" />
+</head>
+<body>
+  <!-- Notification Container -->
+  <div id="notification-container"></div>
+
+  <h2>AI-Generated Notes</h2>
+  <ul id="notesList"></ul>
+  <div class="buttons-container">
+    <button id="copyNotes">Copy</button>
+    <button id="importNotes">Import</button>
+    <button id="exportNotes">Export</button>
+    <button id="clearNotes">Clear Notes</button>
+  </div>
+  <!-- Hidden file input for import -->
+  <input type="file" id="notesFileInput" accept=".txt" style="display: none;">
+
+  <script src="assets/js/notes.js"></script>
+</body>
+</html>
