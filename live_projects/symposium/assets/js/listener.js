@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       silenceDuration: 1900,                      // ms of sustained silence (below stop threshold) before ending a segment
       minSegmentDuration: 1000,                   // discard very short segments
       minimumRecordingLength: 10000,               // ms, minimum total length for a finalized recording segment
-      baseLineMultiplier: 1.4
+      baseLineMultiplier: 0.19
     };
   
     // ======= AUDIO ANALYSIS STATE =======

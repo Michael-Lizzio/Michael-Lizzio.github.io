@@ -10,7 +10,7 @@ const DEFAULT_CONFIG = {
   silenceDuration: 1900,
   minSegmentDuration: 1000,
   minimumRecordingLength: 10000,
-  baseLineMultiplier: 1.4,
+  baseLineMultiplier: 0.19,
   apiKey: ""
 };
 
