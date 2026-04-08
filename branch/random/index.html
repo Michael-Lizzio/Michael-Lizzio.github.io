@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA28 family trip calendar</title>
+  <link rel="stylesheet" href="styles/planner.css" />
+  <script type="module" src="scripts/planner-app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>LA28 family trip calendar</h1>
+      <p class="lede">
+        Set your <strong>arrival</strong> and <strong>departure</strong> — everything outside that window disappears.
+        Sports on the calendar: track &amp; field, lacrosse, swimming, <strong>equestrian (eventing EQU01–EQU05 + jumping EQU13–EQU16)</strong>,
+        beach volleyball, artistic swimming, water polo, climbing, sailing, rhythmic, triathlon. Pure dressage sessions (EQU06–EQU12) are hidden on purpose.
+        Tap a session to shortlist it. <strong>Pink border</strong> = Sienna overlap (<code>ATH03</code> / <code>LAC05</code>).
+      </p>
+      <p id="load-status" class="muted">Loading…</p>
+      <div id="error-banner" class="error-banner" hidden role="alert"></div>
+    </header>
+
+    <div id="app" class="app-shell" hidden>
+      <section class="panel controls controls--bar">
+        <div class="row dates-row">
+          <label class="field">
+            <span>Arrival</span>
+            <input type="date" id="arrival-date" />
+          </label>
+          <label class="field">
+            <span>Departure</span>
+            <input type="date" id="departure-date" />
+          </label>
+        </div>
+        <div class="row">
+          <label class="field grow">
+            <span>Name (optional, for the file you send Michael)</span>
+            <input type="text" id="traveler-name" placeholder="e.g. Katlyn" />
+          </label>
+        </div>
+        <label class="field">
+          <span>Notes (optional, included in download)</span>
+          <textarea id="notes" rows="2" placeholder="Anything we should know…"></textarea>
+        </label>
+
+        <fieldset class="view-fieldset">
+          <legend>Show</legend>
+          <label class="inline"><input type="radio" name="view" id="view-all" checked /> All sessions in your trip dates</label>
+          <label class="inline"><input type="radio" name="view" id="view-selected" /> Only what I tapped (my list)</label>
+        </fieldset>
+
+        <div class="row actions">
+          <button type="button" class="btn primary" id="btn-export">Download my picks (JSON)</button>
+          <button type="button" class="btn ghost" id="btn-reset">Clear saved picks</button>
+        </div>
+        <p class="stats"><span id="session-count">0</span> sessions in view · <span id="selected-count">0</span> selected</p>
+
+        <div class="quick">
+          <span class="quick-label">Quick add:</span>
+          <span id="quick-picks"></span>
+        </div>
+      </section>
+
+      <section class="panel cal-wrap cal-wrap--fullbleed">
+        <div class="cal-grid" id="cal-head"></div>
+        <div class="cal-body" id="cal-body"></div>
+      </section>
+
+      <details class="legend-panel">
+        <summary>Colors</summary>
+        <ul class="legend-list">
+          <li><span class="swatch ath"></span> Track &amp; field</li>
+          <li><span class="swatch lacrosse"></span> Lacrosse</li>
+          <li><span class="swatch swim"></span> Swimming</li>
+          <li><span class="swatch equestrian"></span> Equestrian — eventing + jumping (not dressage-only)</li>
+          <li><span class="swatch beach"></span> Beach volleyball</li>
+          <li><span class="swatch artswim"></span> Artistic swimming</li>
+          <li><span class="swatch polo"></span> Water polo</li>
+          <li><span class="swatch climb"></span> Climbing</li>
+          <li><span class="swatch sail"></span> Sailing</li>
+          <li><span class="swatch rhythmic"></span> Rhythmic gymnastics</li>
+          <li><span class="swatch tri"></span> Triathlon</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</body>
+</html>
