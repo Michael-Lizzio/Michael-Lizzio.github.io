@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA28 ticket listings &amp; itinerary</title>
+  <link rel="stylesheet" href="styles/tickets.css" />
+  <script type="module" src="scripts/tickets-app.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="nav-row">
+      <a href="index.html">← Back to trip calendar</a>
+    </div>
+    <h1>Priced sessions (LA28 shop)</h1>
+    <p class="lede">
+      Browse every listing from <code>data/la28-ticket-listings.json</code> (scraped from the ticket site). Search and filter,
+      add sessions to <strong>My itinerary</strong>, and see codes, venues, and starting prices. Selections save in this browser.
+      Export JSON to share with Michael.
+    </p>
+    <p id="load-status" class="muted">Loading listings…</p>
+    <div id="error-banner" class="error-banner" hidden role="alert"></div>
+  </header>
+
+  <div id="app" class="layout" hidden>
+    <main class="main-col">
+      <div class="toolbar panel">
+        <label class="field" style="flex: 1">
+          <span>Search (code, sport, venue, zone)</span>
+          <input type="search" id="search" placeholder="e.g. ATH03, Swimming, Exposition…" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Zone</span>
+          <select id="filter-zone">
+            <option value="">All zones</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Sort by price</span>
+          <select id="sort-price">
+            <option value="date">By date (default)</option>
+            <option value="low">Lowest first</option>
+            <option value="high">Highest first</option>
+          </select>
+        </label>
+      </div>
+      <p class="stats-line" id="stats-line"></p>
+      <div id="browse-list"></div>
+    </main>
+
+    <aside class="panel itinerary-panel">
+      <h2>My itinerary</h2>
+      <p class="muted" style="margin: 0 0 12px">Tap “Add” on any session. Order follows date.</p>
+      <div class="itinerary-scroll" id="itinerary-list"></div>
+      <div class="itin-totals" id="itinerary-totals"></div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+        <button type="button" class="btn btn-add" id="btn-export">Download itinerary JSON</button>
+        <button type="button" class="btn btn-ghost" id="btn-clear">Clear itinerary</button>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
