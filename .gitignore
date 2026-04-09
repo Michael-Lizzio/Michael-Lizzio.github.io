@@ -35,6 +35,8 @@ _testmain.go
 .DS_Store
 
 ##other
+.venv/
+.env
 #node_modules/
 #bower_components/
 .tmp

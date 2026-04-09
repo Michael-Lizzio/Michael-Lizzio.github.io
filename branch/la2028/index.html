@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA28 Olympic Itinerary Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var k = "la28-theme";
+        var t = localStorage.getItem(k);
+        if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+        else if (t === "dark") document.documentElement.removeAttribute("data-theme");
+        else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__mark" aria-hidden="true">LA28</span>
+        <div>
+          <h1 class="app-header__title">Olympic Itinerary Planner</h1>
+          <p class="app-header__subtitle">Browse sessions, build your schedule, estimate ticket spend</p>
+        </div>
+      </div>
+      <div class="app-header__actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch to light mode">
+          Light
+        </button>
+        <script>
+          (function () {
+            var b = document.getElementById("theme-toggle");
+            if (!b) return;
+            var light = document.documentElement.getAttribute("data-theme") === "light";
+            b.textContent = light ? "Dark" : "Light";
+            b.setAttribute("aria-pressed", light ? "true" : "false");
+            b.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+          })();
+        </script>
+        <label class="search-field">
+          <span class="visually-hidden">Search events</span>
+          <input type="search" id="search-input" placeholder="Search title, venue, code…" autocomplete="off">
+        </label>
+        <div class="view-toggle" role="group" aria-label="View mode">
+          <button type="button" class="view-toggle__btn is-active" data-view="list" aria-pressed="true">List</button>
+          <button type="button" class="view-toggle__btn" data-view="calendar" aria-pressed="false">Calendar</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="status-banner" class="status-banner" hidden></div>
+
+    <div class="toolbar">
+      <button type="button" class="toolbar__filters-toggle" id="filters-toggle" aria-expanded="false" aria-controls="filters-panel">
+        Filters
+      </button>
+      <div class="toolbar__load">
+        <label class="file-load">
+          <input type="file" id="json-file" accept=".json,application/json" hidden>
+          <span class="btn btn--ghost">Load JSON file</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="filters-panel" class="filters-panel">
+      <div class="filters-grid">
+        <label class="filter-field">
+          <span>Sport</span>
+          <select id="filter-sport"></select>
+        </label>
+        <label class="filter-field">
+          <span>Zone</span>
+          <select id="filter-zone"></select>
+        </label>
+        <label class="filter-field">
+          <span>Day</span>
+          <select id="filter-day"></select>
+        </label>
+        <label class="filter-field">
+          <span>Max price (USD)</span>
+          <input type="number" id="filter-price-max" min="0" step="1" placeholder="No limit">
+        </label>
+        <label class="filter-field">
+          <span>Sort</span>
+          <select id="sort-by">
+            <option value="date-asc">Date (earliest first)</option>
+            <option value="date-desc">Date (latest first)</option>
+            <option value="price-asc">Price (low to high)</option>
+            <option value="price-desc">Price (high to low)</option>
+            <option value="title-asc">Title (A–Z)</option>
+            <option value="title-desc">Title (Z–A)</option>
+          </select>
+        </label>
+        <div class="filter-actions">
+          <button type="button" class="btn btn--ghost" id="btn-reset-filters">Reset filters</button>
+          <button type="button" class="btn btn--ghost" id="btn-export-itinerary">Export itinerary JSON</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <main class="main-panel">
+        <section id="list-view" class="list-view" aria-label="Event list">
+          <div id="event-list" class="event-list"></div>
+          <p id="list-empty" class="empty-state" hidden>No events match your filters.</p>
+        </section>
+
+        <section id="calendar-view" class="calendar-view" hidden aria-label="Calendar">
+          <div class="calendar-nav">
+            <button type="button" class="btn btn--ghost" id="cal-prev" aria-label="Previous month">←</button>
+            <h2 class="calendar-nav__label" id="cal-month-label"></h2>
+            <button type="button" class="btn btn--ghost" id="cal-next" aria-label="Next month">→</button>
+          </div>
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div id="calendar-grid" class="calendar-grid"></div>
+          <div id="calendar-day-events" class="calendar-day-events"></div>
+        </section>
+      </main>
+
+      <aside class="itinerary-panel" id="itinerary-panel" aria-label="Your itinerary">
+        <div class="itinerary-panel__head">
+          <h2>Your itinerary</h2>
+          <button type="button" class="btn btn--small btn--ghost" id="btn-clear-itinerary">Clear all</button>
+        </div>
+        <ul id="itinerary-list" class="itinerary-list"></ul>
+        <p id="itinerary-empty" class="empty-state">No events yet. Add sessions from the list.</p>
+        <footer class="itinerary-total">
+          <div class="itinerary-total__row">
+            <span>Estimated total</span>
+            <strong id="itinerary-total-amount">—</strong>
+          </div>
+          <p class="itinerary-total__note" id="itinerary-total-note"></p>
+        </footer>
+      </aside>
+    </div>
+
+    <button type="button" class="fab-itinerary" id="fab-itinerary" aria-controls="itinerary-panel" aria-expanded="false">
+      Itinerary <span class="fab-itinerary__count" id="fab-count">0</span>
+    </button>
+  </div>
+
+  <script src="data/sport-icons.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
