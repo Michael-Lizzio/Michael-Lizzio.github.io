@@ -1,79 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Homepage</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Preview of Michael Lizzio's current software engineering portfolio.">
+    <link rel="canonical" href="https://michaeljlizzio.com/">
+    <title>Michael Lizzio · Software Engineering Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Include the navbar -->
-    <div id="navbar-container"></div>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page nav-row">
+        <a class="wordmark" href="https://michaeljlizzio.com/">Michael Lizzio</a>
+        <nav aria-label="Main navigation">
+          <a href="https://michaeljlizzio.com/">Home</a>
+          <a href="https://michaeljlizzio.com/work/">Work</a>
+          <a href="https://michaeljlizzio.com/about/">About</a>
+          <a href="https://michaeljlizzio.com/contact/">Contact</a>
+          <a href="https://michaeljlizzio.com/resume.pdf">Resume</a>
+        </nav>
+      </div>
+    </header>
 
-    <main id="holder">
-        <section id="home">
-            <div class="container">
-                <div class="header-content">
-                    <div class="profile-box">
-                        <img src="data/project_images/homepage/profile_photo.jpg" alt="Profile Image" class="profile-image">
-                        <div class="profile-info">
-                            <h1>Michael Lizzio</h1>
-                            <p class="hero-label">Software Engineering Major at RIT</p>
-                            <hr class="divider">
-                            <p class="bio">Aspiring software engineer with strong communication skills and a passion for sharing knowledge and collaborating on complex and challenging problems. I have 8 years of experience in Python coding and a foundational understanding of several other programming languages. I am eager to expand my knowledge and continue learning new skills.</p>
-                        </div>
-                    </div>
-                    <div class="header-image-section">
-                        <img src="data/project_images/homepage/about_me_collage.png" alt="Header Image" class="header-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-        <section id="middle">
-            <div class="simple-buttons">
-                <a href="../data/files/resume.pdf" class="button resume" target="_blank" rel="noopener noreferrer">Resume</a>
-                <a href="https://github.com/michael-lizzio" class="button github">GitHub</a>
-            </div>
-        </section>
+    <main>
+      <section class="preview-note">
+        <div class="page preview-note-row">
+          <p>You are viewing a preview of my current portfolio.</p>
+          <a href="https://michaeljlizzio.com/">Open michaeljlizzio.com</a>
+        </div>
+      </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-heading">My Top Projects</h2>
-                <div class="mobile-exclaimer-container">
-                    <div class="mobile-exclaimer-background"></div>
-                    <h1 class="mobile-exclaimer">For the full experience when viewing projects, switch your phone to landscape mode!</h1>
-                </div>
-                <div class="project-grid">
-                    <!-- Project cards will be added dynamically here -->
-                </div>
-                <div class="coming-soon">
-                    <h3>Last Update 7/20/24 © 2024 Michael Lizzio</h3>
-                </div>
+      <section class="hero">
+        <div class="page hero-grid">
+          <div class="hero-copy">
+            <img class="portrait" src="preview-assets/profile.webp" alt="Michael Lizzio">
+            <h1>Michael Lizzio</h1>
+            <p class="headline">Software Engineering Major at RIT</p>
+            <p class="intro">Aspiring software engineer with strong communication skills and a passion for sharing knowledge and collaborating on complex and challenging problems. I work mostly in Python, with a foundational understanding of several other languages, and I'm eager to expand my knowledge and keep learning new skills.</p>
+            <div class="actions">
+              <a class="button primary" href="https://michaeljlizzio.com/resume.pdf">Resume</a>
+              <a class="button secondary" href="https://michaeljlizzio.com/work/">View my work</a>
             </div>
-        </section>
+          </div>
+          <a class="collage-link" href="https://michaeljlizzio.com/about/" aria-label="Learn more about Michael Lizzio">
+            <img class="collage" src="preview-assets/collage.webp" alt="A collage of skiing, swimming, family, travel, and a robotic foosball project">
+          </a>
+        </div>
+      </section>
+
+      <section class="work-section">
+        <div class="page">
+          <h2>Selected work</h2>
+          <p class="section-intro">The projects I'd show you first, with the story and artifacts behind each build.</p>
+
+          <div class="project-grid">
+            <a class="project-card" href="https://michaeljlizzio.com/work/symposium/">
+              <img src="preview-assets/symposium.webp" alt="Symposium Notes transcription interface">
+              <div class="card-copy">
+                <p class="project-date">February 2025</p>
+                <h3>Symposium Notes</h3>
+                <p>An AI-powered assistant that records, transcribes, and summarizes lectures.</p>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://michaeljlizzio.com/work/foosball/">
+              <img src="preview-assets/foosball.webp" alt="Automated foosball goalie project">
+              <div class="card-copy">
+                <p class="project-date">December 2022</p>
+                <h3>Automated Foosball Goalie</h3>
+                <p>KURT, a camera-tracked robotic foosball goalie.</p>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://michaeljlizzio.com/work/cryptogram/">
+              <img src="preview-assets/cryptogram.webp" alt="Cryptogram Solver project cover">
+              <div class="card-copy">
+                <p class="project-date">February 2022</p>
+                <h3>Cryptogram Solver</h3>
+                <p>A backtracking program that cracks cryptogram puzzles word by word.</p>
+              </div>
+            </a>
+          </div>
+
+          <a class="button secondary all-work" href="https://michaeljlizzio.com/work/">See all projects</a>
+        </div>
+      </section>
     </main>
 
-    <script src="scripts.js"></script>
-    <!-- Load and inject the navbar -->
-    <script>
-        const navbarContainer = document.getElementById('navbar-container');
-        fetch('tools/navbar/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                navbarContainer.innerHTML = data;
-            })
-            .catch(error => console.error('Error fetching navbar HTML:', error));
-
-        // Fetch and display projects
-        fetch('data/projects.json')
-            .then(response => response.json())
-            .then(data => {
-                projects = data;
-                displayProjects();
-            })
-            .catch(error => console.error('Error fetching projects JSON:', error));
-    </script>
-</body>
+    <footer>
+      <div class="page footer-row">
+        <p>© 2026 Michael Lizzio</p>
+        <a href="https://michaeljlizzio.com/">Current portfolio</a>
+      </div>
+    </footer>
+  </body>
 </html>
