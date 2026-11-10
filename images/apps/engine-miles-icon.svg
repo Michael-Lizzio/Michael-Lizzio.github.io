@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">A · Refined gauge</title><desc id="desc">A refined version of the existing orange gauge, with a larger arc and a tapered needle that stays separate from the rim.</desc>
+<defs>
+  <linearGradient id="amber" x1="0" y1="0" x2="0.32" y2="1">
+    <stop offset="0" stop-color="#FFB440"/>
+    <stop offset="1" stop-color="#F28A00"/>
+  </linearGradient>
+  <linearGradient id="graphite" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#292D33"/>
+    <stop offset="1" stop-color="#14171C"/>
+  </linearGradient>
+</defs>
+<rect width="1024" height="1024" fill="url(#amber)"/>
+<path d="M235.730 674.554 A294 294 0 1 1 788.270 674.554" fill="none" stroke="#FFFFFF" stroke-width="80" stroke-linecap="round"/>
+<path d="M485 548 L655 407 Q664 400 670 407 Q676 414 669 423 L547 603 Z" fill="#FFFFFF"/>
+<circle cx="512" cy="574" r="52" fill="#FFFFFF"/>
+</svg>
