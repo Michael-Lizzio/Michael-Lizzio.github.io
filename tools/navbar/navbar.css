@@ -1,0 +1,72 @@
+/* Define color variables */
+:root {
+  --navbar-primary-bg: #13294b;
+  --navbar-primary-text: #ffffff;
+  --navbar-link-color: #e63946;
+  --navbar-link-hover-color: #000000;
+  --navbar-underline-color: #e63946;
+}
+
+
+/* Reset default list styles for the navbar */
+nav {
+  padding: 10px;
+  background-color: var(--navbar-primary-bg);
+  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: var(--navbar-primary-text);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--navbar-underline-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover:before {
+  transform: scaleX(1);
+}
+
+nav a:hover {
+  background-color: var(--navbar-link-hover-color);
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+}
