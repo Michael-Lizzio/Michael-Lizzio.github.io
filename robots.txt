@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://michaeljlizzio.pages.dev/sitemap.xml
